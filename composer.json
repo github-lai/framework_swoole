@@ -1,5 +1,5 @@
 {
-    "name": "h3/framework+swoole",
+    "name": "h3/framework_swoole",
     "description": "An highly effecient php mvc framework with swoole extension",
     "type": "library",
     "license": "MIT",
