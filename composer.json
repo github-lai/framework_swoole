@@ -1,0 +1,24 @@
+{
+    "name": "h3/framework+swoole",
+    "description": "An highly effecient php mvc framework with swoole extension",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "github-lai",
+            "email": "373515719@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1"
+    },
+    "autoload": {
+    	"files":[],
+	"psr-4":{
+	   "Lib\\" :"lib",
+	   "Lib\\Cache\\" :"lib/cache",
+	   "Lib\\Db\\" :"lib/db",
+	   "Lib\\IBase\\" :"lib/ibase"
+	}
+    }
+}
