@@ -57,7 +57,6 @@ class Router{
 
 		if(!file_exists($ctrlfile)){
 			$msg = "dispatch alert : Controller '$area/$controller' not found(check $ctrlfile)";
-			Helper::error($msg);
 			return new Rsp($msg,404);
 		}else{
 			$classname = "Ctrl\\$area\\".$controller;
@@ -112,6 +111,11 @@ class Router{
 			$ctrl->setRequest($request);
 			$ctrl->setResponse($response);
 			
+			if(!method_exists($ctrl,$action))
+			{
+				return new Rsp("404 Not Found",404);
+			}
+
 			$result = $ctrl->$action($id);
 			if(!($result instanceof Rsp))
 			{
